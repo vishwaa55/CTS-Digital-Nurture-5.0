@@ -1,0 +1,21 @@
+Q1. What is Spring Data JPA? Give a quick example.
+Answer: 
+Spring Data JPA is a Spring module that sits on top of a JPA provider (like Hibernate) 
+to reduce boilerplate database code. By extending the JpaRepository interface, it 
+automatically generates implementations for standard CRUD operations at runtime, 
+so you do not have to write custom DAO/Repository implementation classes.
+
+Example:
+public interface BookRepository extends JpaRepository<Book, Long> {
+    // CRUD methods like save(), findById(), and delete() are automatically available
+}
+
+
+Q2. What is the difference between JPA, Hibernate, and Spring Data JPA?
+Answer:
+* JPA (Java Persistence API) is a specification/standard that defines the rules and 
+interfaces for Object-Relational Mapping (ORM) in Java.
+* Hibernate is an ORM framework that actually implements the JPA specification, performing 
+the database queries and mapping Java objects to database rows.
+* Spring Data JPA is an abstraction layer built on top of JPA/Hibernate that simplifies 
+the data access layer by automatically providing ready-to-use repository implementations.

@@ -1,0 +1,12 @@
+DECLARE
+    CURSOR c_upcoming_dues IS
+        SELECT c.Name, l.LoanID, l.DueDate
+        FROM Customers c
+        JOIN Loans l ON c.CustomerID = l.CustomerID
+        WHERE l.DueDate BETWEEN TRUNC(SYSDATE) AND TRUNC(SYSDATE) + 30;
+BEGIN
+    FOR rec IN c_upcoming_dues LOOP
+        DBMS_OUTPUT.PUT_LINE('Reminder: Customer ' || rec.Name || ', your loan (ID: ' || rec.LoanID || ') is due on ' || TO_CHAR(rec.DueDate, 'YYYY-MM-DD') || '.');
+    END LOOP;
+END;
+/

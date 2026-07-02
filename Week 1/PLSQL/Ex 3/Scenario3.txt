@@ -1,0 +1,38 @@
+CREATE OR REPLACE PROCEDURE TransferFunds (
+    p_source_account IN NUMBER,
+    p_dest_account IN NUMBER,
+    p_amount IN NUMBER
+) AS
+    v_source_balance NUMBER;
+BEGIN
+    IF p_amount <= 0 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Transfer amount must be positive.');
+    END IF;
+
+    SELECT Balance INTO v_source_balance
+    FROM Accounts
+    WHERE AccountID = p_source_account
+    FOR UPDATE;
+
+    IF v_source_balance >= p_amount THEN
+        UPDATE Accounts
+        SET Balance = Balance - p_amount
+        WHERE AccountID = p_source_account;
+
+        UPDATE Accounts
+        SET Balance = Balance + p_amount
+        WHERE AccountID = p_dest_account;
+
+        COMMIT;
+    ELSE
+        RAISE_APPLICATION_ERROR(-20002, 'Insufficient balance in the source account.');
+    END IF;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        ROLLBACK;
+        RAISE_APPLICATION_ERROR(-20003, 'One or both accounts do not exist.');
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END;
+/

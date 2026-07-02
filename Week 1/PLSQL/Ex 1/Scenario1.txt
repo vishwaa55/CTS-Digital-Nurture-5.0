@@ -1,0 +1,15 @@
+DECLARE
+    CURSOR c_senior_loans IS
+        SELECT l.LoanID
+        FROM Customers c
+        JOIN Loans l ON c.CustomerID = l.CustomerID
+        WHERE c.Age > 60;
+BEGIN
+    FOR rec IN c_senior_loans LOOP
+        UPDATE Loans
+        SET InterestRate = InterestRate - 1
+        WHERE LoanID = rec.LoanID;
+    END LOOP;
+    COMMIT;
+END;
+/
