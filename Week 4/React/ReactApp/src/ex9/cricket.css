@@ -1,0 +1,192 @@
+.cricket-dashboard {
+  font-family: 'Outfit', sans-serif;
+  color: #fff;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.cricket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+}
+
+.cricket-header h2 {
+  font-size: 2rem;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.toggle-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toggle-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.toggle-btn {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.flag-true {
+  background-color: #10b981;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.toggle-btn.flag-false {
+  background-color: #3b82f6;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.cricket-content h1 {
+  font-size: 1.5rem;
+  color: #f8fafc;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  border-left: 4px solid #6366f1;
+  padding-left: 12px;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.player-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.player-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.player-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.player-score {
+  font-size: 0.9rem;
+  color: #10b981;
+}
+
+.player-score.warning {
+  color: #f59e0b;
+}
+
+.alert-card {
+  background: rgba(245, 158, 11, 0.05);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.alert-card:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.alert-card .player-number {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.merge-card {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.merge-card:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.merge-card .player-number {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.player-status-tag {
+  font-size: 0.8rem;
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.destructured-players-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.destructured-player-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid #6366f1;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.destructured-player-item:hover {
+  transform: translateX(2px);
+  border-left-color: #38bdf8;
+  background: rgba(255, 255, 255, 0.06);
+}

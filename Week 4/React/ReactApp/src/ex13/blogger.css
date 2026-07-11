@@ -1,0 +1,127 @@
+.blogger-app-container {
+  font-family: 'Outfit', sans-serif;
+  color: #fff;
+  max-width: 950px;
+  margin: 20px auto;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 35px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.35);
+}
+
+.blogger-controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 12px;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.blogger-control-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.blogger-control-item input {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.blogger-columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.2);
+}
+
+/* Layout and classes exactly as indicated in the Lab Hint screenshots */
+.st2, .v1, .mystyle1 {
+  padding: 24px 30px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Borders separating the columns (green vertical lines, as in the screenshots) */
+.st2 {
+  border-right: 4px solid #10b981;
+}
+
+.v1 {
+  border-right: 4px solid #10b981;
+}
+
+.mystyle1 {
+  /* Last column, no right border */
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.blogger-columns-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-item-card {
+  padding-bottom: 16px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.detail-item-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-item-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin: 0 0 6px 0;
+}
+
+.detail-item-card h4 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #10b981;
+  margin: 0;
+}
+
+.detail-item-card .subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.detail-item-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #cbd5e1;
+  margin: 0;
+}

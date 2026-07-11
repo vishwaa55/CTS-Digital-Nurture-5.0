@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #0f172a;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225, 39%, 25%, 0.3) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339, 49%, 20%, 0.25) 0, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.App-header {
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.App-header h1 {
+  font-family: 'Outfit', sans-serif;
+  color: #f8fafc;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-family: 'Outfit', sans-serif;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin: 0 0 24px 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+  color: #fff;
+  background: #4f46e5;
+  box-shadow: 0 4px 12px 0 rgba(79, 70, 229, 0.3);
+}
+
+.App-content {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 10px;
+}
+
+.exercise-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+}
